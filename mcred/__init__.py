@@ -7,7 +7,7 @@ import pysftp
 
 
 class CredManager:
-    def __init__(self, host, port, username, password, remote_credentials_file_path):
+    def __init__(self, host=None, port=None, username=None, password=None, remote_credentials_file_path=None):
         self.host = host
         self.username = username
         self.password = password

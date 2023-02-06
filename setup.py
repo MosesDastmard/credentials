@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="mcred",
-    version="1.0.0",
+    version="1.0.1",
     author="Moses Dastmard",
     description="manage credentials from remote server",
     long_description=long_description,
