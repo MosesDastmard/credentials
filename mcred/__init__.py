@@ -3,7 +3,8 @@ import json
 import pathlib
 import os
 import pysftp
-
+cnopts = pysftp.CnOpts()
+cnopts.hostkeys = None    # disable host key checking.
 
 
 class CredManager:
@@ -23,6 +24,7 @@ class CredManager:
                 username=self.username, 
                 password=self.password,
                 port=self.port,
+                cnopts=cnopts,
             ) as sftp:
                 print(f"Downloading credentials from {self.remote_file_path} to {self.local_file_path})")
                 sftp.get(remotepath=self.remote_file_path, localpath=self.local_file_path)
